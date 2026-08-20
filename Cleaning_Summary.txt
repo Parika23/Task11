@@ -1,0 +1,33 @@
+Task11 — Company Employee Dataset Cleaning Summary
+
+Input file: Day11_Messy_Company_Employee_Dataset.csv
+Output file: Cleaned_Company_Employee.csv
+
+BEFORE CLEANING
+- Rows: 157
+- Columns: 12
+- Missing cells: 32
+- Duplicate rows: 7
+
+CLEANING PERFORMED
+1. Loaded and inspected the CSV with Pandas.
+2. Checked missing values with isnull()/isna().
+3. Trimmed leading/trailing whitespace in text fields.
+4. Standardized inconsistent categorical entries for Department, Gender, and Work_Mode.
+5. Converted numeric fields to numeric data types and filled missing numeric values using median imputation.
+6. Filled missing categorical values using mode imputation.
+7. Converted Joining_Date to a proper datetime type.
+8. Removed exact duplicate records with drop_duplicates().
+9. Rechecked missing values, duplicates, and data types after cleaning.
+10. Exported the cleaned dataset as a CSV file.
+
+AFTER CLEANING
+- Rows: 150
+- Columns: 12
+- Missing cells: 0
+- Duplicate rows: 0
+
+Notes:
+- Median was selected for numeric columns because it is less sensitive to outliers than the mean.
+- Mode was selected for categorical columns because it preserves the most common category.
+- Forward filling/dropna were not used indiscriminately; there were no time-series fields requiring forward filling, and dropping rows would unnecessarily discard usable employee records.
