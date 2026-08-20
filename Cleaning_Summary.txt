@@ -30,4 +30,4 @@ AFTER CLEANING
 Notes:
 - Median was selected for numeric columns because it is less sensitive to outliers than the mean.
 - Mode was selected for categorical columns because it preserves the most common category.
-- Forward filling/dropna were not used indiscriminately; there were no time-series fields requiring forward filling, and dropping rows would unnecessarily discard usable employee records.
+- Forward filling/dropna were not used indiscriminately; there were no time series fields requiring forward filling, and dropping rows would unnecessarily discard usable employee records.
